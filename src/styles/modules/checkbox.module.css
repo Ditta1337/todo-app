@@ -1,0 +1,72 @@
+.toggle {
+  align-items: center;
+  border-radius: 100px;
+  display: flex;
+  font-weight: 700;
+}
+
+.toggle:lastoftype {
+  margin: 0;
+}
+
+.toggleInput {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.toggleInput:not([disabled]):active + .toggleTrack,
+.toggleInput:not([disabled]):focus + .toggleTrack {
+  border: 1px solid transparent;
+  box-shadow: 0px 0px 0px 2px rgb(255, 255, 255);
+}
+
+.toggleTrack {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 100px;
+  cursor: pointer;
+  display: flex;
+  height: 30px;
+  margin-right: 12px;
+  position: relative;
+  width: 60px;
+}
+
+.toggleIndicator {
+  align-items: center;
+  background: rgba(126, 126, 126, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 24px;
+  bottom: 2px;
+  display: flex;
+  height: 24px;
+  justify-content: center;
+  left: 2px;
+  outline: solid 2px transparent;
+  position: absolute;
+  transition: transform 0.5s ease-in-out;
+  width: 24px;
+}
+
+.checkMark {
+  fill: #fff;
+  height: 20px;
+  width: 20px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.toggleInput:checked + .toggleTrack .toggleIndicator {
+  background: rgb(63, 205, 96);
+  transform: translateX(30px);
+}
+
+.toggleInput:checked + .toggleTrack .checkMark {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}

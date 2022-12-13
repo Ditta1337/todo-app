@@ -1,0 +1,72 @@
+.button {
+  display: inline-block;
+  height: 40px;
+  padding: 0.8rem 2rem;
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1.6rem;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  text-transform: capitalize;
+  cursor: pointer;
+  overflow: hidden;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.buttonSelect {
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  right: 0;
+  /*don't know why this button was missaligned so I did this*/
+  transform: translateY(-58%);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  height: 40px;
+  padding: 0.8rem 0.3rem;
+  border: 3px solid rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  text-decoration: none;
+  text-transform: capitalize;
+  cursor: pointer;
+  overflow: hidden;
+  width: 150px;
+}
+
+.buttonPrimary {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: rgb(255, 255, 255);
+}
+
+.buttonSecondary {
+  margin-left: 5px;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3);
+  background-color: rgba(230, 95, 50, 0.2);
+  border-color: rgb(114, 98, 100);
+  color: rgb(114, 98, 100);
+}
+
+.button:hover {
+  background-position: 100% 0;
+  -o-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.1)
+  );
+  box-shadow: 0 4px 15px 0 rgba(255, 255, 255, 0.75);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}

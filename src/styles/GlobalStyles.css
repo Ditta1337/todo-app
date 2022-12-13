@@ -1,0 +1,26 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+body {
+  font-family: "Popins", sans-serif;
+  font-size: 1.6rem;
+  background-color: rgb(250, 172, 168);
+  background-image: linear-gradient(
+    19deg,
+    rgb(250, 172, 168) 0%,
+    rgb(221, 214, 243) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  color: rgb(255, 255, 255);
+}
