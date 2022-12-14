@@ -50,7 +50,7 @@
   font-size: 3.5rem;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   font-weight: 700;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   text-transform: capitalize;
   text-align: center;
 }
@@ -60,8 +60,10 @@
 }
 
 .form label {
-  font-size: 1.6rem;
-  color: rgb(0, 0, 0);
+  font-size: 2rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  color: rgb(255, 255, 255);
 }
 
 .form label input, select {
