@@ -1,2 +1,3 @@
 # todo-app
-### Artur Dwornik
+### TypeScript + React + CSS
+#### Artur Dwornik
