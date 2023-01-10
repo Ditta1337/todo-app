@@ -1,21 +1,24 @@
 package main
 
 import (
-	"log"
-	"net/http"
 	"example.com/m/routes"
 	"github.com/gorilla/mux"
+	"net/http"
 )
 
-
 func main() {
+	// Create new router
+	r := mux.NewRouter()
 
+	// Add middleware
+	r.Use(mux.CORSMethodMiddleware(r)) // maybe wrong
 
-    r := mux.NewRouter()
+	// Add routes
+	routes.Setup(r)
 
-    routes.Setup(r)
-    // Routes consist of a path and a handler function.
-
-    // Bind to a port and pass our router in and 
-    log.Fatal(http.ListenAndServe(":8080", r))
+	// Start the server
+	err := http.ListenAndServe(":8000", r)
+	if err != nil {
+		panic(err)
+	}
 }
