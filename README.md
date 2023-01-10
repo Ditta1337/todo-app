@@ -1,3 +1,3 @@
 # todo-app
-### TypeScript + React + CSS
+### TypeScript + React + CSS + Go + sqlite
 #### Artur Dwornik
