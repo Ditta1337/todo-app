@@ -12,10 +12,14 @@ import (
 )
 
 // Secret Key used to sign the token
-const SecretKey = "secret"
+const SecretKey = "secretsecret"
 
 // Register a new user
 func Register(w http.ResponseWriter, r *http.Request) {
+	// Allows the client to access the response 
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	
+
 	// Decode the request body into a map
 	var data map[string]string
 	if err := json.NewDecoder(r.Body).Decode(&data); err != nil {
@@ -80,7 +84,7 @@ func Login(w http.ResponseWriter, r *http.Request) {
 	// Compare the password
 	err := bcrypt.CompareHashAndPassword(user.Password, []byte(data["password"]))
 	if err != nil {
-		http.Error(w, "Invalid username or password", http.StatusUnauthorized)
+		http.Error(w, err.Error(), http.StatusUnauthorized)
 		return
 	}
 
